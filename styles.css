@@ -1,0 +1,85 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background: url("../img/image2.jpg");
+    background-size: cover;
+}
+.h{
+    font-family:'Times New Roman', Times, serif;
+    padding: 15px;
+    color: rgb(121, 230, 121);
+}
+.mail{
+    width: 450px;
+    height: 350px;
+    background: rgb(3, 22, 21);
+    position: absolute;
+    top: 30%;
+    bottom: 40%;
+    left: 10%;
+    transform-style: preserve-3d;
+    border-bottom-left-radius: 5%;
+    border-bottom-right-radius: 5%;
+    cursor: pointer;
+    transition-delay: 3s;
+}
+.mail:before{
+    content: "";
+    position: absolute;
+    top:0;
+    left:0;
+    z-index: 2;
+    border-left: 225px solid rgb(163, 157, 157);
+    border-right: 225px solid rgb(163, 157, 157);
+    border-top: 175px solid transparent;
+    border-bottom:175px solid gray;
+    border-bottom-left-radius: 5%;
+    border-bottom-right-radius: 5%;
+}
+.cover:before{
+    content: "";
+    position: absolute;
+    top:0;
+    left:0;
+    border-left: 225px solid transparent;
+    border-right: 225px solid transparent;
+    border-top: 175px solid rgb(236, 227, 228);
+    border-bottom: 175px solid transparent;
+    transform-origin: top;
+    transform: rotateX(0deg);
+    transition: all 2s 2s ease;
+}
+.letter{
+    content:"";
+    position:absolute;
+    top:0;
+    left: 5px;
+    z-index: -1;
+    background-image: url("../img/letter2.jpg");
+    background-size: cover;
+    border-radius: 5%;
+    width: 440px;
+    height: 340px;
+    transition: all 2s  ease;
+
+}
+.letter h1{
+    text-align: left;
+    padding-top: 25%;
+    padding-left: 5%;
+    font-size: 40px;
+    color:#0d1d25;
+    font-family:'Times New Roman', Times, serif;
+}
+body:hover .cover:before{
+    transform: rotateX(180deg);
+    transition: all 2s ease;
+
+}
+body:hover .letter{
+    z-index:2; 
+    top: -200px;
+    transition: all 2s 2s ease;
+}
